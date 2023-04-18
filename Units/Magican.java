@@ -1,6 +1,6 @@
 package Units;
 
-public class Magican extends BaseUnit{
+public abstract class Magican extends BaseUnit{
     protected float mana;
     Magican(String name, float hp, float luck, int speed, int damage, float mana) {
         super(name, hp, luck, speed, damage);

@@ -6,4 +6,14 @@ public class Monk extends Magican {
         super(name, 20, 0.5f, 1, 1, 20);
     }
 
+
+    @Override
+    public void step() {
+
+    }
+
+    @Override
+    public String getInfo() {
+        return " Имя: " + name + "   Здоровье: " + hp + "   Удача: " + luck + "   Скорость: " + speed + "   Урон: " + damage + "   Мана: " + mana;
+    }
 }
