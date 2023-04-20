@@ -6,6 +6,10 @@ public class Spearman extends BaseUnit{
         super(name, 30, 0.6f, 2, 4);
     }
 
+    public String toString() {
+        return "Копейщик";
+    }
+
     @Override
     public void step() {
 

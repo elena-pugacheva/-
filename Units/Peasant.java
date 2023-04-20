@@ -5,6 +5,10 @@ public class Peasant extends BaseUnit {
         super(name, 10, 0.5f, 1,1);
     }
 
+    public String toString() {
+        return "Крестьянин";
+    }
+
     @Override
     public void step() {
 

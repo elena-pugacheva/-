@@ -13,6 +13,10 @@ public class Thief extends BaseUnit{
 
     }
 
+    public String toString() {
+        return "Разбойник";
+    }
+
     @Override
     public void step() {
 

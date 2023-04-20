@@ -11,7 +11,7 @@ public class Sniper extends Shooter{
     }
     @Override
     public String toString() {
-        return name;
+        return "Лучник";
     }
 
     public String getInfo() {

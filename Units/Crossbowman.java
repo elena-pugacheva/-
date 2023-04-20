@@ -6,6 +6,10 @@ public class Crossbowman extends Shooter{
         super(name, 20, 0.5f, 1, 2, 2, 50, 15, 0.5f);
     }
 
+    public String toString() {
+        return "Арбалетчик";
+    }
+
     @Override
     public void step() {
 
