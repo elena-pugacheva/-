@@ -1,9 +1,11 @@
 package Units;
 
+import java.util.ArrayList;
+
 public class Sniper extends Shooter{
 
-    public Sniper(String name) {
-        super(name, 20, 0.6f, 2, 4, 5, 10, 3, 0.5f);
+    public Sniper(ArrayList<BaseUnit> gang, String name) {
+        super(gang, name, 20f, 40f, 2f, 8, 5, 10, 3, 2, 6);
     }
 
     public void step() {
@@ -15,6 +17,6 @@ public class Sniper extends Shooter{
     }
 
     public String getInfo() {
-        return " Имя: " + name + "   Здоровье: " + hp + "   Удача: " + luck + "   Скорость: " + speed + "   Урон: " + damage;
+        return " Имя: " + name + "   Здоровье: " + hp + "   Макс.здоровье: " + maxHp + "   Удача: " + luck + "   Скорость: " + speed + "   Урон: " + damage;
     }
 }

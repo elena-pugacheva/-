@@ -1,9 +1,11 @@
 package Units;
 
+import java.util.ArrayList;
+
 public class Thief extends BaseUnit{
 
-    public Thief(String name) {
-        super(name, 20, 0.8f, 3, 2);
+    public Thief(ArrayList<BaseUnit> gang, String name) {
+        super(gang, name, 20f, 25f, 3f, 5, 10);
     }
 
     void dodge(){
@@ -26,4 +28,5 @@ public class Thief extends BaseUnit{
     public String getInfo() {
         return " Имя: " + name + "     Здоровье: " + hp + "   Удача: " + luck + "   Скорость: " + speed + "   Урон: " + damage;
     }
+
 }

@@ -1,39 +1,49 @@
 package Units;
 
-public abstract class BaseUnit implements GameInterface{
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Random;
+
+public abstract class BaseUnit implements GameInterface, Comparable{
     protected String name;
-    protected float hp, luck;
+    protected float hp, maxHp, luck;
     protected int speed, damage;
+    protected ArrayList<BaseUnit> gang;
 
 
 
-    BaseUnit(String name, float hp, float luck, int speed, int damage){
+    BaseUnit(ArrayList<BaseUnit> gang, String name, float hp, float maxHp, float luck, int speed, int damage){
+        this.gang = gang;
         this.name = name;
         this.hp = hp;
+        this.maxHp = maxHp;
+        if(new Random().nextBoolean()) this.hp-=8;
         this.luck = luck;
         this.speed = speed;
         this.damage = damage;
 
     }
 
-    void attack(){
-
-    }
-    void await(){
-
-    }
-    void defend(){
-
-    }
-    void walk(){
-
-    }
-    void dead(){
-
-    }
 
     @Override
     public String toString() {
         return name;
+    }
+
+
+    public void getDamage(float damage){
+        this.hp -= damage;
+        if (this.hp > this.maxHp){
+            this.hp = this.maxHp;
+        }
+        if (this.hp < 0){
+            this.hp = 0;
+        }
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        BaseUnit baseUnit = (BaseUnit) o ;
+        return baseUnit.speed - this.speed;
     }
 }

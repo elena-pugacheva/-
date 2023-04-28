@@ -1,12 +1,14 @@
 package Units;
 
+import java.util.ArrayList;
+
 public abstract class Shooter extends BaseUnit{
     protected int distance,maxCountBullet,currentCountBullet;
     protected float accuracy;
 
-    Shooter(String name, float hp, float luck, int speed, int damage,int distance,
+    Shooter(ArrayList<BaseUnit> gang, String name, float hp, float maxHp, float luck, int speed, int damage, int distance,
             int maxCountBullet, int currentCountBullet, float accuracy) {
-        super(name, hp, luck, speed, damage);
+        super(gang, name, hp, maxHp, luck, speed, damage);
         this.distance = distance;
         this.maxCountBullet = maxCountBullet;
         this.currentCountBullet = currentCountBullet;

@@ -1,7 +1,9 @@
 package Units;
 
 public interface GameInterface {
-    void step();
+    default void step() {
+    }
 
     String getInfo();
+
 }

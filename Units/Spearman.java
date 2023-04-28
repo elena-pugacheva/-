@@ -1,9 +1,11 @@
 package Units;
 
+import java.util.ArrayList;
+
 public class Spearman extends BaseUnit{
 
-    public Spearman(String name) {
-        super(name, 30, 0.6f, 2, 4);
+    public Spearman(ArrayList<BaseUnit> gang, String name) {
+        super(gang, name, 30f, 40f, 15f, 6,10);
     }
 
     public String toString() {

@@ -37,51 +37,72 @@ public class Game {
 //        System.out.println();
 
         ArrayList<BaseUnit> team1 = new ArrayList<>();
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 5; i++){
             switch (new Random(). nextInt(6 )){
                 case 0:
-                    team1.add(new Peasant("Aragorn"));
+                    team1.add(new Peasant(team1,"Aragorn"));
                     break;
                 case 1:
-                    team1.add(new Sniper("Legolas"));
+                    team1.add(new Sniper(team1,"Legolas"));
                     break;
                 case 2:
-                    team1.add(new Thief("Karis"));
+                    team1.add(new Thief(team1,"Karis"));
                     break;
                 case 3:
-                    team1.add(new Spearman("Moris"));
+                    team1.add(new Spearman(team1,"Moris"));
                     break;
                 case 4:
-                    team1.add(new Monk("Gandalf"));
+                    team1.add(new Monk(team1,"Gandalf"));
                     break;
                 case 5:
-                    team1.add(new Crossbowman("Aris"));
+                    team1.add(new Crossbowman(team1,"Aris"));
                 }
         }
         ArrayList<BaseUnit> team2 = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             switch (new Random().nextInt(6)) {
                 case 0:
-                    team2.add(new Peasant("Aragorn"));
+                    team2.add(new Peasant(team2,"Aragorn"));
                     break;
                 case 1:
-                    team2.add(new Sniper("Legolas"));
+                    team2.add(new Sniper(team2,"Legolas"));
                     break;
                 case 2:
-                    team2.add(new Thief("Karis"));
+                    team2.add(new Thief(team2,"Karis"));
                     break;
                 case 3:
-                    team2.add(new Spearman("Moris"));
+                    team2.add(new Spearman(team2,"Moris"));
                     break;
                 case 4:
-                    team2.add(new Monk("Gandalf"));
+                    team2.add(new Monk(team2,"Gandalf"));
                     break;
                 case 5:
-                    team2.add(new Crossbowman("Aris"));
+                    team2.add(new Crossbowman(team2,"Aris"));
             }
         }
         team1.forEach(n -> System.out.println(n.toString() + "   " + n.getInfo()));
         System.out.println();
         team2.forEach(n -> System.out.println(n.toString() + "   " + n.getInfo()));
+        System.out.println();
+
+        team1.forEach(n -> n.step());
+        team2.forEach(n -> n.step());
+
+        team1.forEach(n -> System.out.println(n.toString() + "   " + n.getInfo()));
+        System.out.println();
+        team2.forEach(n -> System.out.println(n.toString() + "   " + n.getInfo()));
+        System.out.println();
+
+        ArrayList<BaseUnit> team3 = new ArrayList<>();
+        team3.addAll(team1);
+        team3.addAll(team2);
+        team3.sort(BaseUnit::compareTo);
+        team3.forEach(n -> System.out.println(n.toString() + "   " + n.getInfo()));
+        System.out.println();
+
+
+
+
+
     }
 }

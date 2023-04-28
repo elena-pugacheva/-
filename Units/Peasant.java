@@ -1,8 +1,10 @@
 package Units;
 
+import java.util.ArrayList;
+
 public class Peasant extends BaseUnit {
-     public Peasant(String name) {
-        super(name, 10, 0.5f, 1,1);
+     public Peasant(ArrayList<BaseUnit> gang, String name) {
+        super(gang, name, 10f, 20f, 5f,2, 10);
     }
 
     public String toString() {
