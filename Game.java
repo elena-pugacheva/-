@@ -92,12 +92,12 @@ public class Game {
         team2.forEach(n -> System.out.println(n.toString() + "   " + n.getInfo()));
         System.out.println();
 
-        ArrayList<BaseUnit> team3 = new ArrayList<>();
-        team3.addAll(team1);
-        team3.addAll(team2);
-        team3.sort(BaseUnit::compareTo);
-        team3.forEach(n -> System.out.println(n.toString() + "   " + n.getInfo()));
-        System.out.println();
+//        ArrayList<BaseUnit> team3 = new ArrayList<>();
+//        team3.addAll(team1);
+//        team3.addAll(team2);
+//        team3.sort(BaseUnit::compareTo);
+//        team3.forEach(n -> System.out.println(n.toString() + "   " + n.getInfo()));
+//        System.out.println();
 
 
 
