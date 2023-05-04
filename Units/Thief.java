@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Thief extends BaseUnit{
 
-    public Thief(ArrayList<BaseUnit> gang, String name) {
-        super(gang, name, 20f, 25f, 3f, 5, 10);
+    public Thief(ArrayList<BaseUnit> gang, String name, int x, int y) {
+        super(gang, name, 20f, 25f, 3f, 5, 10, x, y);
     }
 
     void dodge(){
@@ -20,7 +20,7 @@ public class Thief extends BaseUnit{
     }
 
     @Override
-    public void step() {
+    public void step(ArrayList<BaseUnit> enemy) {
 
     }
 

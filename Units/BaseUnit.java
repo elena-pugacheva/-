@@ -4,15 +4,18 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Random;
 
+
 public abstract class BaseUnit implements GameInterface, Comparable{
     protected String name;
     protected float hp, maxHp, luck;
     protected int speed, damage;
     protected ArrayList<BaseUnit> gang;
+    protected Coordinate coordinate;
 
 
 
-    BaseUnit(ArrayList<BaseUnit> gang, String name, float hp, float maxHp, float luck, int speed, int damage){
+
+    BaseUnit(ArrayList<BaseUnit> gang, String name, float hp, float maxHp, float luck, int speed, int damage, int x, int y){
         this.gang = gang;
         this.name = name;
         this.hp = hp;
@@ -21,6 +24,7 @@ public abstract class BaseUnit implements GameInterface, Comparable{
         this.luck = luck;
         this.speed = speed;
         this.damage = damage;
+        this.coordinate = new Coordinate(x, y);
 
     }
 
@@ -46,4 +50,8 @@ public abstract class BaseUnit implements GameInterface, Comparable{
         BaseUnit baseUnit = (BaseUnit) o ;
         return baseUnit.speed - this.speed;
     }
+
+
+
+
 }
