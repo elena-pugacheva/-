@@ -1,7 +1,6 @@
 package Units;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Random;
 
 
@@ -52,6 +51,11 @@ public abstract class BaseUnit implements GameInterface, Comparable{
     }
 
 
+    public int[] getCoords() {
+        return new int[]{coordinate.x, coordinate.y};
+    }
 
-
+    public float getHp() {
+        return hp;
+    }
 }

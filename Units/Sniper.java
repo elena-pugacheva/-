@@ -9,11 +9,11 @@ public class Sniper extends Shooter{
     }
 
     @Override
-    public String toString() {
+    public String getInfo() {
         return "Лучник";
     }
 
-    public String getInfo() {
+    public String toString() {
         return " Имя: " + name + "   Здоровье: " + hp + "   Макс.здоровье: " + maxHp + "   Удача: " + luck + "   Скорость: " + speed + "   Урон: " + damage;
     }
 }

@@ -15,7 +15,7 @@ public class Thief extends BaseUnit{
 
     }
 
-    public String toString() {
+    public String getInfo() {
         return "Разбойник";
     }
 
@@ -25,7 +25,7 @@ public class Thief extends BaseUnit{
     }
 
     @Override
-    public String getInfo() {
+    public String toString() {
         return " Имя: " + name + "     Здоровье: " + hp + "   Удача: " + luck + "   Скорость: " + speed + "   Урон: " + damage;
     }
 

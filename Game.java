@@ -2,8 +2,13 @@ import Units.*;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Game {
+    public static ArrayList<BaseUnit> team1 = new ArrayList<>();
+    public static ArrayList<BaseUnit> team2 = new ArrayList<>();
+    public static ArrayList<BaseUnit> team3 = new ArrayList<>();
+
     public static void main(String[] args){
 //        Peasant peasant = new Peasant("Aragorn");
 //        System.out.println(peasant);
@@ -35,7 +40,6 @@ public class Game {
 //        System.out.println(monk.getInfo());
 //        System.out.println();
 
-        ArrayList<BaseUnit> team1 = new ArrayList<>();
         for (int i = 1; i < 11; i++){
             switch (new Random(). nextInt(6 )){
                 case 0:
@@ -57,7 +61,7 @@ public class Game {
                     team1.add(new Crossbowman(team1,"Aris", 1, i));
                 }
         }
-        ArrayList<BaseUnit> team2 = new ArrayList<>();
+
         for (int i = 1; i < 11; i++) {
             switch (new Random().nextInt(6)) {
                 case 0:
@@ -79,29 +83,20 @@ public class Game {
                     team2.add(new Crossbowman(team2,"Aris", 10, i));
             }
         }
-        team1.forEach(n -> System.out.println(n.toString() + "   " + n.getInfo()));
-        System.out.println();
-        team2.forEach(n -> System.out.println(n.toString() + "   " + n.getInfo()));
-        System.out.println();
-
-        team1.forEach(n -> n.step(team2));
-        team2.forEach(n -> n.step(team1));
-
-        team1.forEach(n -> System.out.println(n.toString() + "   " + n.getInfo()));
-        System.out.println();
-        team2.forEach(n -> System.out.println(n.toString() + "   " + n.getInfo()));
-        System.out.println();
-
-//        ArrayList<BaseUnit> team3 = new ArrayList<>();
-//        team3.addAll(team1);
-//        team3.addAll(team2);
-//        team3.sort(BaseUnit::compareTo);
-//        team3.forEach(n -> System.out.println(n.toString() + "   " + n.getInfo()));
-//        System.out.println();
 
 
-
-
-
+        team3.addAll(team1);
+        team3.addAll(team2);
+        team3.sort(BaseUnit::compareTo);
+        Scanner in = new Scanner(System.in);
+       while (true){
+            View.view();
+            in.nextLine();
+           for (BaseUnit unit:team3) {
+               if(team1.contains(unit)){
+                   unit.step(team2);
+               }else{unit.step(team1);}
+           }
+       }
     }
 }

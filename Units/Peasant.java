@@ -10,22 +10,22 @@ public class Peasant extends BaseUnit {
 
     }
 
-    public String toString() {
+    public String getInfo() {
         return "Крестьянин";
     }
 
     @Override
     public void step(ArrayList<BaseUnit> enemy) {
         if (readiness){
-            System.out.println(this + " " + this.name + " ничего не делает ");
+            System.out.println(this.name + " ничего не делает ");
         } else{
             readiness = true;
-            System.out.println(this + " " + this.name + " находит припасы ");
+            System.out.println(this.name + " находит припасы ");
         }
     }
 
     @Override
-    public String getInfo() {
+    public String toString() {
         return " Имя: " + name + "   Здоровье: " + hp + "   Удача: " + luck + "   Скорость: " + speed + "   Урон: " + damage;
     }
 

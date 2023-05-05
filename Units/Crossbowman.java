@@ -8,12 +8,12 @@ public class Crossbowman extends Shooter{
         super(gang, name,20f, 60f, 7f, 7, 2, 50, 15, 20, 20, x, y);
     }
 
-    public String toString() {
+    public String getInfo() {
         return "Арбалетчик";
     }
 
     @Override
-    public String getInfo() {
+    public String toString() {
         return " Имя: " + name + "      Здоровье: " + hp + "   Удача: " + luck + "   Скорость: " + speed + "   Урон: " + damage;
     }
 }

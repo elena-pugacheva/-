@@ -8,7 +8,7 @@ public class Spearman extends BaseUnit{
         super(gang, name, 30f, 40f, 15f, 6,10, x, y);
     }
 
-    public String toString() {
+    public String getInfo() {
         return "Копейщик";
     }
 
@@ -18,7 +18,7 @@ public class Spearman extends BaseUnit{
     }
 
     @Override
-    public String getInfo() {
+    public String toString() {
         return " Имя: " + name + "     Здоровье: " + hp + "   Удача: " + luck + "   Скорость: " + speed + "   Урон: " + damage;
     }
 }

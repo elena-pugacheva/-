@@ -8,7 +8,7 @@ public class Monk extends Magican {
         super(gang, name, 20f, 50f, 1, 4, 20, 30f, 50f, x, y);
     }
 
-    public String toString() {
+    public String getInfo() {
         return "Монах";
     }
 
@@ -24,7 +24,7 @@ public class Monk extends Magican {
         }
     }
     @Override
-    public String getInfo() {
+    public String toString() {
         return " Имя: " + name + "   Здоровье: " + hp + "   Удача: " + luck + "   Скорость: " + speed + "   Урон: " + damage + "   Мана: " + mana;
     }
 }
