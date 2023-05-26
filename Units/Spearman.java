@@ -13,12 +13,8 @@ public class Spearman extends BaseUnit{
     }
 
     @Override
-    public void step(ArrayList<BaseUnit> enemy) {
-
-    }
-
-    @Override
     public String toString() {
         return " Имя: " + name + "     Здоровье: " + hp + "   Удача: " + luck + "   Скорость: " + speed + "   Урон: " + damage;
     }
+
 }

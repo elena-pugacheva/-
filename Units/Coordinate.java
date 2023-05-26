@@ -8,8 +8,15 @@ public class Coordinate {
         this.y = y;
     }
     public float getDistance(Coordinate coordinateEnemy){
-        float dx = coordinateEnemy.x - this.x;
-        float dy = coordinateEnemy.y - this.y;
+        float dx = distanceXY(coordinateEnemy)[0];
+        float dy = distanceXY(coordinateEnemy)[1];
         return (float) Math.sqrt(dx*dx + dy*dy);
+    }
+
+    public float[] distanceXY(Coordinate coordinate){
+        float[] result = new float[2];
+        result[0] = (float)coordinate.x - this.x;
+        result[1] = (float)coordinate.y - this.y;
+        return result;
     }
 }

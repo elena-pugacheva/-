@@ -27,4 +27,15 @@ public class Monk extends Magican {
     public String toString() {
         return " Имя: " + name + "   Здоровье: " + hp + "   Удача: " + luck + "   Скорость: " + speed + "   Урон: " + damage + "   Мана: " + mana;
     }
+
+    @Override
+    public void getDamage(float damage){
+        this.hp -= damage;
+        if (this.hp > this.maxHp){
+            this.hp = this.maxHp;
+        }
+        if (this.hp < 0){
+            this.hp = 0;
+        }
+    }
 }

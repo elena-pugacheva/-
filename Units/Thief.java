@@ -19,10 +19,6 @@ public class Thief extends BaseUnit{
         return "Разбойник";
     }
 
-    @Override
-    public void step(ArrayList<BaseUnit> enemy) {
-
-    }
 
     @Override
     public String toString() {
